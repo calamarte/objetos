@@ -4,7 +4,7 @@
 public class Pez {
     String nombre = "pepito";
 
-    static int numpeces = 0;
+    private static int numpeces = 0;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

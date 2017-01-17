@@ -6,7 +6,7 @@ public class Carta {
     TipoDeCarta c;
     int numero;
 
-    static int cantcartas = 0;
+   private static int cantcartas = 0;
 
     enum TipoDeCarta{
         OROS,
@@ -14,13 +14,16 @@ public class Carta {
         ESPADAS,
         BASTOS
     }
+    enum Numero {
+        AS, DOS, TRES, CUATR0, CINCO, SEIS, SIETE, OCHO, NUEVE, SOTA, CABALLO, REY
+    }
 
     Carta(TipoDeCarta c, int numero){
         if((numero >= 0) && (numero <= 11)){
          this.numero = numero;
          cantcartas++;
         }else{
-            System.out.println("No existe");
+
             return;
         }
 

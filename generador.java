@@ -6,7 +6,19 @@ import java.util.Arrays;
 public class generador {
     public static void main(String[] args) {
 
-        Carta a = new Carta(Carta.TipoDeCarta.BASTOS, 3);
+        Pez Pablo = new Pez();
+        Pez Jaime = new Pez();
+        Pablo.setNombre("Pablo");
+        Jaime.setNombre("Jaime");
+
+        Pablo.numpeces = 1;
+        Jaime.numpeces = 2;
+
+        System.out.println(Pablo.getNombre());
+        System.out.println(Jaime.getNombre());
+        System.out.println(Pablo.numpeces);
+        System.out.println(Jaime.numpeces);
+
 
 }
 }
