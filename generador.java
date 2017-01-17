@@ -5,20 +5,13 @@ import java.util.Arrays;
  */
 public class generador {
     public static void main(String[] args) {
+         Baraja b = new Baraja();
 
-        Pez Pablo = new Pez();
-        Pez Jaime = new Pez();
-        Pablo.setNombre("Pablo");
-        Jaime.setNombre("Jaime");
+        for (int i = 0; i < 48 ; i++) {
+            b.imprime(i);
+        }
 
-        Pablo.numpeces = 1;
-        Jaime.numpeces = 2;
+        b.baraja[7].getCantcartas();
 
-        System.out.println(Pablo.getNombre());
-        System.out.println(Jaime.getNombre());
-        System.out.println(Pablo.numpeces);
-        System.out.println(Jaime.numpeces);
-
-
-}
+    }
 }

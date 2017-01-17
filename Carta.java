@@ -3,12 +3,12 @@
  */
 public class Carta {
 
-    TipoDeCarta c;
-    int numero;
+     Palo c;
+     Numero numero;
 
    private static int cantcartas = 0;
 
-    enum TipoDeCarta{
+    enum Palo {
         OROS,
         COPAS,
         ESPADAS,
@@ -18,15 +18,9 @@ public class Carta {
         AS, DOS, TRES, CUATR0, CINCO, SEIS, SIETE, OCHO, NUEVE, SOTA, CABALLO, REY
     }
 
-    Carta(TipoDeCarta c, int numero){
-        if((numero >= 0) && (numero <= 11)){
+    Carta(Palo c, Numero numero){
          this.numero = numero;
          cantcartas++;
-        }else{
-
-            return;
-        }
-
         this.c = c;
     }
 
