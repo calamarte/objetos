@@ -5,7 +5,8 @@ import java.util.Arrays;
  */
 public class generador {
     public static void main(String[] args) {
-        Numero n = new Numero("XCIV");
-        n.imprime();
-    }
+
+        Carta a = new Carta(Carta.TipoDeCarta.BASTOS, 3);
+
+}
 }
