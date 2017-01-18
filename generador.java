@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Created by calamarte on 11/01/2017.
+ * Created by calamarte on 11/01/2017. :)
  */
 public class generador {
     public static void main(String[] args) {
@@ -11,7 +11,12 @@ public class generador {
             b.imprime(i);
         }
 
-        b.baraja[7].getCantcartas();
+        b.mezcla();
 
+        System.out.println("---------------");
+
+        for (int i = 0; i < 48 ; i++) {
+            b.imprime(i);
+        }
     }
 }

@@ -1,11 +1,12 @@
 import java.util.Arrays;
+import java.util.Random;
 
 /**
- * Created by calamarte on 17/01/2017.
+ * Created by calamarte on 17/01/2017. :)
  */
-public class Baraja {
+ class Baraja {
 
-    Carta[] baraja = new Carta[48];
+    private Carta[] baraja = new Carta[48];
 
     Baraja(){
 
@@ -27,9 +28,22 @@ public class Baraja {
 
     }
 
+    void mezcla(){
+
+        Random r = new Random();
+
+        for (int i = baraja.length -1; i >= 1; i--) {
+            int ii = r.nextInt(i+1);
+             Carta c = baraja[ii];
+             baraja[ii] = baraja[i];
+             baraja[i] = c;
+        }
+
+    }
+
     void imprime(int n){
         if (n <= 47) {
-            System.out.println("El " + baraja[n].numero + " de " + baraja[n].c);
+            System.out.println(baraja[n].numero + " de " + baraja[n].c);
         }else{
             System.out.println("No existe");
         }
