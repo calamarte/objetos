@@ -1,22 +1,36 @@
-import java.util.Arrays;
+
 
 /**
  * Created by calamarte on 11/01/2017. :)
  */
 public class generador {
+
     public static void main(String[] args) {
-         Baraja b = new Baraja();
+        Baraja baraja = new Baraja();
+        Maquina maquina = new Maquina();
+        Humano humano = new Humano();
+        Brisca brisca = new Brisca();
 
-        for (int i = 0; i < 48 ; i++) {
-            b.imprime(i);
+        baraja.mezcla();
+
+        brisca.setTriunfo(baraja);
+
+        humano.mano = brisca.repartir(baraja);
+        maquina.mano = brisca.repartir(baraja);
+
+
+        while (true){
+
+            break;
         }
 
-        b.mezcla();
-
-        System.out.println("---------------");
+        System.out.println("-------------------------------------------");
 
         for (int i = 0; i < 48 ; i++) {
-            b.imprime(i);
+            baraja.imprime(i);
         }
+
+
+
     }
 }

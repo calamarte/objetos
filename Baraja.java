@@ -1,12 +1,11 @@
-import java.util.Arrays;
 import java.util.Random;
 
 /**
  * Created by calamarte on 17/01/2017. :)
  */
- class Baraja {
+  public class Baraja {
 
-    private Carta[] baraja = new Carta[48];
+     Carta[] baraja = new Carta[48];
 
     Baraja(){
 
@@ -41,9 +40,11 @@ import java.util.Random;
 
     }
 
+
     void imprime(int n){
         if (n <= 47) {
-            System.out.println(baraja[n].numero + " de " + baraja[n].c);
+            if (baraja[n] == null){return;}
+            System.out.println(baraja[n].numero + " de " + baraja[n].palo);
         }else{
             System.out.println("No existe");
         }

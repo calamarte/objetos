@@ -3,7 +3,7 @@
  */
 public class Carta {
 
-     Palo c;
+     Palo palo;
      Numero numero;
 
    private static int cantcartas = 0;
@@ -18,10 +18,10 @@ public class Carta {
         AS, DOS, TRES, CUATR0, CINCO, SEIS, SIETE, OCHO, NUEVE, SOTA, CABALLO, REY
     }
 
-    Carta(Palo c, Numero numero){
+    Carta(Palo palo, Numero numero){
          this.numero = numero;
          cantcartas++;
-        this.c = c;
+        this.palo = palo;
     }
 
     void getCantcartas(){
@@ -29,7 +29,7 @@ public class Carta {
     }
 
     void imprime(){
-        System.out.println(c);
+        System.out.println(palo);
         System.out.println(numero);
     }
 
