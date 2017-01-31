@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 /**
  * Created by calamarte on 11/01/2017. :)
@@ -15,20 +15,31 @@ public class generador {
 
         brisca.setTriunfo(baraja);
 
-        humano.mano = brisca.repartir(baraja);
-        maquina.mano = brisca.repartir(baraja);
 
 
         while (true){
 
-            break;
+            humano.mano = brisca.repartir(baraja);
+            maquina.mano = brisca.repartir(baraja);
+
+            Scanner s = new Scanner(System.in);
+
+            System.out.println( "Carta triunfo es "+brisca.getTriunfo().imprime());
+            humano.getmano();
+            int h = s.nextInt();
+            int m = maquina.inteligencia();
+
+            brisca.compara(humano.mano[h],maquina.mano[m],humano,maquina);
+            humano.elimina(h);
+            maquina.elimina(m);
+
         }
 
-        System.out.println("-------------------------------------------");
+        //System.out.println("-------------------------------------------");
 
-        for (int i = 0; i < 48 ; i++) {
-            baraja.imprime(i);
-        }
+       // for (int i = 0; i < 48 ; i++) {
+         //   baraja.imprime(i);
+        //}
 
 
 

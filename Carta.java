@@ -28,9 +28,12 @@ public class Carta {
         System.out.println(cantcartas);
     }
 
-    void imprime(){
-        System.out.println(palo);
-        System.out.println(numero);
+    String imprime(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(numero + " de " + palo);
+
+        return sb.toString();
     }
 
 }

@@ -5,7 +5,11 @@ public class Brisca {
 
    private Carta triunfo;
 
-    public void setTriunfo(Baraja b) {
+     Carta getTriunfo() {
+        return triunfo;
+    }
+
+    void setTriunfo(Baraja b) {
 
         for (int i = 0; i < 48 ; i++) {
             if (b.baraja[i] != null) {
@@ -25,7 +29,7 @@ public class Brisca {
 
             if(mano[m] == null) {
 
-                if (c >= 47) {
+                if (c >= 48) {
                     break;
                 }
 
@@ -53,6 +57,7 @@ public class Brisca {
 
         if (humano.palo == triunfo.palo || maquina.palo == triunfo.palo){
             if(humano.palo == triunfo.palo && maquina.palo == triunfo.palo) {
+
                 if (h > m) {
                     H.setPuntos(h + m);
                     H.humanoGana(M, true);
@@ -79,7 +84,6 @@ public class Brisca {
                 H.humanoGana(M,false);
             }
         }
-
 
     }
 

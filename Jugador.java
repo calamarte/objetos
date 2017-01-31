@@ -26,6 +26,10 @@ public class Jugador {
         }
     }
 
+    void elimina(int n){
+        if (n < 3) mano[n] = null;
+    }
+
 
 }
 
